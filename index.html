@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="game-card p-4 p-md-5">
+            <h1 class="text-center mb-4">Number Guessing Game</h1>
+            <div class="text-center mb-4">
+              <p class="fs-5">Guess a number between 1 and 10</p>
+              <p class="chances" id="chances">Chances left: 3</p>
+            </div>
+
+            <div class="mb-4">
+              <div class="input-group">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="guessInput"
+                  min="1"
+                  max="10"
+                  placeholder="Enter your guess"
+                />
+                <button class="btn pink-btn text-white" onclick="makeGuess()">
+                  Guess!
+                </button>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <p class="result-message" id="message"></p>
+              <button
+                class="btn pink-btn text-white mt-3 d-none"
+                id="resetBtn"
+                onclick="resetGame()"
+              >
+                Play Again
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

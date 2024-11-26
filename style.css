@@ -1,0 +1,65 @@
+body {
+    background-color: #fce4ec;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.game-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.pink-btn {
+    background-color: #ec407a;
+    border-color: #ec407a;
+    transition: all 0.3s ease;
+}
+
+.pink-btn:hover {
+    background-color: #d81b60;
+    border-color: #d81b60;
+    transform: translateY(-2px);
+}
+
+.pink-btn:active {
+    transform: translateY(0);
+}
+
+.chances {
+    color: #ec407a;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.result-message {
+    font-size: 1.2rem;
+    font-weight: 500;
+    min-height: 2rem;
+    transition: color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #ec407a;
+    box-shadow: 0 0 0 0.2rem rgba(236, 64, 122, 0.25);
+}
+
+.input-group .form-control {
+    border-right: none;
+}
+
+.input-group .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Animation for messages */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.result-message {
+    animation: fadeIn 0.3s ease-out;
+}
